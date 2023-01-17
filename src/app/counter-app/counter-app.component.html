@@ -1,0 +1,18 @@
+<div class="counter-container">
+    <div class="counter-info">
+        <h1>CounterApp</h1>
+        <p>Current stock: {{stock}}</p>
+        <h2>{{ value }}</h2>
+    </div>
+    <div class="controllers">
+        <button mat-raised-button color="primary" [disabled]="value === 0 ? true : false"
+            (click)="handdleSubstraction()">
+            -
+        </button>
+        <button mat-raised-button color="primary" [disabled]="value >= stock ? true : false"
+            (click)="handdleSum()">+</button>
+    </div>
+    <div class="reset-container">
+        <button mat-raised-button color="warn" (click)="handdleReset()">Clear</button>
+    </div>
+</div>
